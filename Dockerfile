@@ -4,5 +4,5 @@ RUN mkdir fun/
 WORKDIR fun
 RUN pwd
 CMD ["bash"]
-COPY README.md
+COPY README.md .
 EXPOSE 8084
