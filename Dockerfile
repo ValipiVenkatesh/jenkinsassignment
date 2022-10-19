@@ -1,6 +1,6 @@
 FROM ubuntu:20.04
 
-RUN apt-get update && apt-get install -y nginx && service nginx start 
+RUN apt-get update && apt-get install -y curl
 
 RUN mkdir fun/
 
