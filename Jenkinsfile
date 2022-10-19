@@ -31,7 +31,7 @@ pipeline {
                         docker stop "venkatesh-jenkins-container"
                         docker rm "venkatesh-jenkins-container"
                 fi'''
-                sh('docker run -it -d -p 8084:80 --name venkatesh-jenkins-container valipivenkatesh/venkatesh_jenkins_dockerhub')
+                sh('docker run -it -d -p 8085:80 --name venkatesh-jenkins-container valipivenkatesh/venkatesh_jenkins_dockerhub')
                 sh('docker exec venkatesh-jenkins-container service nginx start')
             }
         }
