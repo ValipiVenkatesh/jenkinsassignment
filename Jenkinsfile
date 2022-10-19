@@ -27,12 +27,12 @@ pipeline {
         }
         stage('start a container') {
             steps {
-               sh '''if [ $(docker ps | awk \'{print $NF}\' | grep venkatesh-jenkins-container) = \'venkatesh-jenkins-container\' ]; then
-                        docker stop "venkatesh-jenkins-container"
-                        docker rm "venkatesh-jenkins-container"
+               sh '''if [ $(docker ps | awk \'{print $NF}\' | grep venkatesh-jenkins-container1) = \'venkatesh-jenkins-container1\' ]; then
+                        docker stop "venkatesh-jenkins-container1"
+                        docker rm "venkatesh-jenkins-container1"
                 fi'''
-                sh('docker run -it -d -p 8085:80 --name venkatesh-jenkins-container valipivenkatesh/venkatesh_jenkins_dockerhub')
-                sh('docker exec venkatesh-jenkins-container service nginx start')
+                sh('docker run -it -d -p 8085:80 --name venkatesh-jenkins-container1 valipivenkatesh/venkatesh_jenkins_dockerhub')
+                sh('docker exec venkatesh-jenkins-container1 service nginx start')
             }
         }
     }
